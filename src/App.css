@@ -24,6 +24,10 @@
     justify-content: space-between;
 }
 
+.hero__section {
+  display: flex;
+}
+
 /* @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
