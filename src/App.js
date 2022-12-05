@@ -1,23 +1,16 @@
-
 import './App.css';
+import Hero from './components/Hero';
+import Navbar from './components/Navbar';
 
 function App() {
   return (
     <div className="App">
       <header className="header">
-        <div className='header__nav'>
-          <div className='header__findMe'>
-          <p>Find Me On</p>
-          </div>
-          <div className='header__menu'>
-            <a href='#'>Home</a>
-            <a href='#'>About</a>
-            <a href='#'>Project</a>
-            <a href="#"><button>Contact Me</button></a>
-
-          </div>
-        </div>
+        <Navbar />
       </header>
+      <section className='hero'>
+        <Hero />
+      </section>
     </div>
   );
 }
