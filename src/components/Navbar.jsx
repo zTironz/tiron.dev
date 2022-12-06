@@ -8,10 +8,10 @@ const NavBar = () => {
           <p>Find Me On</p>
           </div>
           <div className='header__menu'>
-            <a href='#'>Home</a>
-            <a href='#'>About</a>
-            <a href='#'>Project</a>
-            <a href="#"><button>Contact Me</button></a>
+            <a className='header__link' href='/home'>Home</a>
+            <a className='header__link' href='/about'>About</a>
+            <a className='header__link' href='/project'>Project</a>
+            <a className='header__link' href="/contact"><button className='contact'>Contact Me</button></a>
 
           </div>
         </div>
