@@ -57,7 +57,7 @@ border: 2px solid #FBFF22;
 border-radius: 5px;
 }
 
-.hero__section {
+.hero {
   display: flex;
 }
 
@@ -129,6 +129,40 @@ color: #999999;
     left: -9px;
     border-radius: 50%;
     border: 1px solid #FBFF22;
+}
+
+.projects__title-wrapper {
+  display: flex;
+  position: relative;
+}
+
+.projects__title {
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 40px;
+line-height: 60px;
+/* identical to box height */
+display: flex;
+align-items: center;
+text-align: justify;
+
+color: #FBFF22;
+}
+
+.projects__title-back {
+  font-family: 'Poppins';
+font-style: normal;
+font-weight: 600;
+font-size: 200px;
+line-height: 300px;
+display: flex;
+align-items: center;
+text-align: justify;
+-webkit-text-stroke: 2px black; /* width and color */
+
+font-family: sans; color: transparent;
+
 }
 
 /* @keyframes App-logo-spin {

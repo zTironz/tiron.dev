@@ -3,7 +3,7 @@ import CV from '../images/cv.svg'
 
 const Hero = () => {
     return (
-        <div className='hero__section'>
+        <section className='hero'>
             <div>
             <h3 className='hero__text'>Hello!</h3>
             <h1 className='hero__title'>I’m <span className='hero__name'>Oleg</span></h1>
@@ -18,7 +18,7 @@ const Hero = () => {
             <img className='hero__img' src={require('../images/photo.png')} alt="hero" />
             <div className='hero__img-wrapper'></div>
             </div>
-        </div>
+        </section>
     );
 };
 
