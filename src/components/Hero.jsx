@@ -12,7 +12,7 @@ const Hero = () => {
             <p className='hero__description'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum ligula a euismod luctus. In facilisis nulla quis laoreet ultricies. Sed pharetra urna diam, nec ultrices sapien vestibulum sed. Cras nec libero quis nisl aliquet maximus. Vivamus porttitor tempus tristique. Integer vitae semper magna, nec venenatis dui. Suspendisse sed erat eros. Fusce vel nibh quam. Ut sed sapien massa.
             </p>
-            <button><img src={CV} alt='cv' />Download CV</button>
+            <button className='hero__cv-button'><img src={CV} alt='cv' />Download CV</button>
             </div>
             <div className='hero__wrapper'>
             <img className='hero__img' src={require('../images/photo.png')} alt="hero" />
