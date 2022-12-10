@@ -4,22 +4,22 @@ import { useState } from 'react';
 
 const Projects = () => {
 
-    const [projects,setProjects] = useState([{
+    const [projects] = useState([{
         id:0,
         img: '../images/',
-        title: 'lol',
+        title: 'test1',
         descr: 'lorumipsum'
     },
     {
         id:1,
         img: '../images/',
-        title: 'lol',
+        title: 'test2',
         descr: 'lorumipsum'
     },
     {
         id:2,
         img: '../images/',
-        title: 'lol',
+        title: 'test3',
         descr: 'lorumipsum'
     }
 ]);
@@ -30,7 +30,11 @@ const Projects = () => {
                 <h3 className='projects__title-back'>MY PROJECT</h3>
                 <h3 className='projects__title'>MY PROJECTS</h3>
             </div>
-            <Project project={projects}  />
+            {/* <Project projects={projects}  /> */}
+
+            {projects.map((project, index) => 
+         <Project project={project} />
+      )}
         </section>
     );
 };
