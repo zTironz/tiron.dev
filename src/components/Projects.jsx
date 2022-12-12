@@ -6,8 +6,9 @@ const Projects = () => {
 
     const [projects] = useState([{
         id:0,
-        img: '../images/',
-        title: 'test1',
+        img: require('../images/diplom.png'),
+        titleHightlight: 'News',
+        title: 'Explorer',
         descr: 'lorumipsum'
     },
     {

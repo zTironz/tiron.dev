@@ -4,10 +4,10 @@ const Project = (props) => {
     console.log(props)
     return (
         <div className='project'>
-                <img src={props.project.img} alt="project" />
-             <div>
-                 <h4>{props.project.title}</h4>
-                 <button>View Details</button>
+                <img className='project__img' src={props.project.img} alt="project" />
+             <div className='project__desc'>
+                 <h4 className='project__title'>{props.project.titleHightlight} {props.project.title}</h4>
+                 <button className='project__button'>View Details</button>
              </div>
         </div>
     );
