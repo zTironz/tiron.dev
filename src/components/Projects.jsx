@@ -34,7 +34,7 @@ const Projects = () => {
             {/* <Project projects={projects}  /> */}
 
             {projects.map((project, index) => 
-         <Project project={project} />
+         <Project key={project.id} project={project} />
       )}
         </section>
     );
