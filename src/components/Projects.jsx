@@ -6,21 +6,64 @@ const Projects = () => {
 
     const [projects] = useState([{
         id:0,
-        img: require('../images/diplom.png'),
+        img: require('../images/firstProj.png'),
+        titleHightlight: 'First',
+        title: 'Project',
+        descr: 'lorumipsum'
+    },
+    {
+        id:1,
+        img: require('../images/newsexplorer.png'),
         titleHightlight: 'News',
         title: 'Explorer',
         descr: 'lorumipsum'
     },
     {
-        id:1,
-        img: '../images/',
-        title: 'test2',
+        id:2,
+        img: require('../images/LogitechLanding.png'),
+        title: 'LogitechLanding',
         descr: 'lorumipsum'
     },
     {
-        id:2,
-        img: '../images/',
-        title: 'test3',
+        id:3,
+        img: require('../images/places.png'),
+        title: 'Places',
+        descr: 'lorumipsum'
+    },
+    {
+        id:4,
+        img: require('../images/adaptive.png'),
+        title: 'First Adaptive',
+        descr: 'lorumipsum'
+    },
+    {
+        id:5,
+        img: require('../images/firstSite.png'),
+        title: 'First Adaptive',
+        descr: 'lorumipsum'
+    },
+    {
+        id:6,
+        img: require('../images/kasperTest.png'),
+        title: 'First Adaptive',
+        descr: 'lorumipsum'
+    },
+    {
+        id:7,
+        img: require('../images/hedgehod.png'),
+        title: 'First Adaptive',
+        descr: 'lorumipsum'
+    },
+    {
+        id:8,
+        img: require('../images/idaProj.png'),
+        title: 'First Adaptive',
+        descr: 'lorumipsum'
+    },
+    {
+        id:9,
+        img: require('../images/reactPosts.png'),
+        title: 'First Adaptive',
         descr: 'lorumipsum'
     }
 ]);
