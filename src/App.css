@@ -59,6 +59,7 @@ border-radius: 5px;
 
 .hero {
   display: flex;
+  margin-top: 20px;
 }
 
 .hero__text {
@@ -177,7 +178,7 @@ font-size: 200px;
 line-height: 300px;
 display: flex;
 align-items: center;
-text-align: justify;
+text-align: center;
 -webkit-text-stroke: 2px black;
 color: transparent;
 
@@ -187,6 +188,7 @@ color: transparent;
   display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 20px;
 }
 
 .project {
