@@ -4,7 +4,7 @@ import CV from '../images/cv.svg'
 const Hero = () => {
     return (
         <section className='hero'>
-            <div>
+            <div className='hero__texts'>
             <h3 className='hero__text'>Hello!</h3>
             <h1 className='hero__title'>I’m <span className='hero__name'>Oleg</span></h1>
             <h3 className='hero__prof'>WEB Developer</h3>
