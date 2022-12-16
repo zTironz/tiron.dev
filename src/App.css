@@ -59,7 +59,13 @@ border-radius: 5px;
 
 .hero {
   display: flex;
+  justify-content: space-between;
+  gap: 20px;
   margin-top: 20px;
+}
+
+.hero__texts {
+  width: 45%;
 }
 
 .hero__text {
@@ -132,11 +138,13 @@ color: #000000;
 .hero__wrapper {
   position: relative;
     display: flex;
+    width: 45%;
+    height: 45%;
 }
 
 .hero__img {
-  width: 495px;
-  height: 493px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
 }
 
@@ -174,7 +182,7 @@ color: #FBFF22;
   font-family: 'Poppins';
 font-style: normal;
 font-weight: 600;
-font-size: 200px;
+font-size: 190px;
 line-height: 300px;
 display: flex;
 align-items: center;
