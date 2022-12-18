@@ -28,7 +28,8 @@
 
 .header__menu {
   display: flex;
-    gap: 2em;
+  gap: 1em;
+  font-size: calc(10px + 1vmin);
     align-items: center;
 }
 
@@ -37,7 +38,6 @@
   font-family: 'Poppins';
 font-style: normal;
 font-weight: 600;
-font-size: 20px;
 line-height: 30px;
 color: #FFFFFF;
 }
@@ -60,7 +60,6 @@ border-radius: 5px;
 .hero {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
   margin-top: 20px;
 }
 
