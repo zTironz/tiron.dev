@@ -42,6 +42,10 @@ line-height: 30px;
 color: #FFFFFF;
 }
 
+.header__link:hover {
+  text-decoration: underline magenta;
+}
+
 .contact {
   color: #FBFF22;
   font-family: 'Poppins';

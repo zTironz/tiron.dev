@@ -2,7 +2,14 @@ import React from 'react';
 import Project from './Project';
 import { useState } from 'react';
 
+
 const Projects = () => {
+
+    // const [totalPages , setTotalPages] = useState(0);
+
+    // const [limit, setLimit] = useState(10);
+   
+    // const [page, setPage] = useState(1);
 
     const [projects] = useState([{
         id:0,
@@ -68,6 +75,11 @@ const Projects = () => {
     }
 ]);
 
+// const changePage = (page) => {
+//     setPage(page)
+//     fetchPosts(limit,page)
+//    }
+
     return (
         <section className='projects'>
             <div className='projects__title-wrapper'>
@@ -78,6 +90,7 @@ const Projects = () => {
 
             {projects.map((project, index) => 
          <Project key={project.id} project={project} />
+        //  <Pagination page={page} changePage={changePage} totalPages={totalPages} />
       )}
         </section>
     );
