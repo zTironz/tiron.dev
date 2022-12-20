@@ -1,6 +1,8 @@
 import React from 'react';
 import Project from './Project';
 import { useState } from 'react';
+import Pagination from './pagination/Pagination';
+
 
 
 const Projects = () => {
@@ -90,7 +92,7 @@ const Projects = () => {
 
             {projects.map((project, index) => 
          <Project key={project.id} project={project} />
-        //  <Pagination page={page} changePage={changePage} totalPages={totalPages} />
+        //   <Pagination  page={page} changePage={changePage} totalPages={totalPages} />
       )}
         </section>
     );
