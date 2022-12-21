@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Project from './Project';
 import { useState } from 'react';
 import Pagination from './pagination/Pagination';
@@ -7,13 +7,13 @@ import Pagination from './pagination/Pagination';
 
 const Projects = () => {
 
-    // const [totalPages , setTotalPages] = useState(0);
+    const [totalPages , setTotalPages] = useState(0);
 
-    // const [limit, setLimit] = useState(10);
+    const [limit, setLimit] = useState(3);
    
-    // const [page, setPage] = useState(1);
+    const [page, setPage] = useState(1);
 
-    const [projects] = useState([{
+    const [store] = useState([{
         id:0,
         img: require('../images/firstProj.png'),
         titleHightlight: 'First',
@@ -77,10 +77,37 @@ const Projects = () => {
     }
 ]);
 
-// const changePage = (page) => {
-//     setPage(page)
-//     fetchPosts(limit,page)
-//    }
+const [projects,setProjects] = useState([])
+
+console.log(projects)
+useEffect(() => {
+    console.log(projects)
+    setProjects(renderProjects(store, limit))
+    setTotalPages(getPageCount(store,limit))
+  }, [])
+
+
+
+const renderProjects = (store, limit) => {
+    // store.slice(0, 4);
+    let projectsPage = []
+    for (let i = 0; i < limit; i++) {
+        projectsPage.push(store[i])
+    }
+
+    return projectsPage
+}
+
+
+const getPageCount =  (store,limit) => {
+    return Math.ceil(store.length / limit)
+}
+
+
+const changePage = (page) => {
+    setPage(page)
+    // setProjects(store.slice())
+   }
 
     return (
         <section className='projects'>
@@ -88,12 +115,11 @@ const Projects = () => {
                 <h3 className='projects__title-back'>MY PROJECT</h3>
                 <h3 className='projects__title'>MY PROJECTS</h3>
             </div>
-            {/* <Project projects={projects}  /> */}
 
             {projects.map((project, index) => 
          <Project key={project.id} project={project} />
-        //   <Pagination  page={page} changePage={changePage} totalPages={totalPages} />
       )}
+      <Pagination  page={page} changePage={changePage} totalPages={totalPages} />
         </section>
     );
 };

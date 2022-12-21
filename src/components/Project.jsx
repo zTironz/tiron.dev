@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Project = (props) => {
-    console.log(props)
+    // console.log(props)
     return (
         <div className='project'>
                 <img className='project__img' src={props.project.img} alt="project" />

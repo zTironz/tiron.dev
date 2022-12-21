@@ -263,9 +263,27 @@ color: #FFFFFF;
     transition: all .8s ease-in;
 }
 
+.projects__page-wrapper {
+  margin-top: 30px;
+  display: flex;
+  gap: 5px;
+  color: #FFFFFF;
+}
+
+.projects__page {
+  border: 1px solid rgb(194, 194, 194);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.projects__page-current {
+  border: 2px solid #FBFF22;
+  font-weight: bold;
+}
+
 
 .footer_copy {
-  font-family: 'Poppins';
+font-family: 'Poppins';
 font-style: normal;
 font-weight: 400;
 font-size: 20px;
