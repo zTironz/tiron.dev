@@ -9,7 +9,7 @@ const getPagesArray = (totalPages) => {
 }
 
 const Pagination = ({totalPages, page, changePage}) => {
-    console.log(totalPages)
+    // console.log(totalPages)
     let pagesArray = getPagesArray(totalPages);
     return (
         <div className='projects__page-wrapper'> {pagesArray.map(p => <span onClick={() => changePage(p)} key={p} className={page === p ? 'projects__page projects__page-current' : 'projects__page'}>{p}</span>)} </div>

@@ -9,7 +9,7 @@ const Projects = () => {
 
     const [totalPages , setTotalPages] = useState(0);
 
-    const [limit, setLimit] = useState(3);
+    const [limit] = useState(3);
    
     const [page, setPage] = useState(1);
 
@@ -77,36 +77,27 @@ const Projects = () => {
     }
 ]);
 
-const [projects,setProjects] = useState([])
+// const [projects,setProjects] = useState([])
 
-console.log(projects)
+
 useEffect(() => {
-    console.log(projects)
-    setProjects(renderProjects(store, limit))
     setTotalPages(getPageCount(store,limit))
+    // setProjects(currentRecords)
   }, [])
 
-
-
-const renderProjects = (store, limit) => {
-    // store.slice(0, 4);
-    let projectsPage = []
-    for (let i = 0; i < limit; i++) {
-        projectsPage.push(store[i])
-    }
-
-    return projectsPage
-}
+  const indexOfLastRecord = page * limit;
+const indexOfFirstRecord = indexOfLastRecord - limit;
+const currentRecords = store.slice(indexOfFirstRecord, 
+    indexOfLastRecord);
 
 
 const getPageCount =  (store,limit) => {
     return Math.ceil(store.length / limit)
 }
 
-
 const changePage = (page) => {
+    // setProjects(store)
     setPage(page)
-    // setProjects(store.slice())
    }
 
     return (
@@ -116,7 +107,7 @@ const changePage = (page) => {
                 <h3 className='projects__title'>MY PROJECTS</h3>
             </div>
 
-            {projects.map((project, index) => 
+            {currentRecords.map((project, index) => 
          <Project key={project.id} project={project} />
       )}
       <Pagination  page={page} changePage={changePage} totalPages={totalPages} />
