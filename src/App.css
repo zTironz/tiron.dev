@@ -300,3 +300,12 @@ color: #FFFFFF;
     transform: rotate(360deg);
   }
 } */
+
+
+@media screen and (max-width: 1024px) {
+  .projects__title-back {
+    font-size: 100px;
+    line-height: 150px;
+  }
+  
+}
