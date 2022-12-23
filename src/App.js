@@ -1,3 +1,7 @@
+import './components/css/header.css';
+import './components/css/hero.css';
+import './components/css/projects.css';
+import './components/css/footer.css';
 import './App.css';
 
 import Footer from './components/Footer';

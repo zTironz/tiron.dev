@@ -77,13 +77,10 @@ const Projects = () => {
     }
 ]);
 
-// const [projects,setProjects] = useState([])
-
-
 useEffect(() => {
     setTotalPages(getPageCount(store,limit))
     // setProjects(currentRecords)
-  }, [])
+  }, [limit,store])
 
   const indexOfLastRecord = page * limit;
 const indexOfFirstRecord = indexOfLastRecord - limit;
