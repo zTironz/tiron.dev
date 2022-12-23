@@ -1,0 +1,48 @@
+
+.header {
+    display: flex;
+    flex-direction: column;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .header__nav {
+    display: flex;
+      align-items: center;
+      justify-content: space-between;
+  }
+  
+  .header__menu {
+    display: flex;
+    gap: 1em;
+    font-size: calc(10px + 1vmin);
+      align-items: center;
+  }
+  
+  .header__link {
+    text-decoration: none;
+    font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  line-height: 30px;
+  color: #FFFFFF;
+  }
+  
+  .header__link:hover {
+    text-decoration: underline magenta;
+  }
+
+  .contact {
+    color: #FBFF22;
+    font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+    background-color: transparent;
+  width: 148px;
+  height: 60px;
+  cursor: pointer;
+  border: 2px solid #FBFF22;
+  border-radius: 5px;
+  }
