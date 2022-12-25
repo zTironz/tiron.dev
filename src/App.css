@@ -6,6 +6,13 @@
 }
 
 
+@media screen and (max-width:768px) {
+  .App {
+padding: 15px 15px;
+  }
+}
+
+
 
 /* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
