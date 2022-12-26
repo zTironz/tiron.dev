@@ -12,6 +12,10 @@
       justify-content: space-between;
   }
   
+  .header__findMe {
+    display: none;
+  }
+  
   .header__menu {
     display: flex;
     gap: 1em;
@@ -41,8 +45,17 @@
   line-height: 30px;
     background-color: transparent;
   width: 148px;
-  height: 60px;
+  padding: calc(1vmin);;
+  /* height: 60px; */
   cursor: pointer;
   border: 2px solid #FBFF22;
   border-radius: 5px;
+  }
+
+  @media screen and (max-width: 720px) {
+    .contact {
+      width: 100%;
+      font-size: calc(12px + 1vmin);
+
+    }
   }
