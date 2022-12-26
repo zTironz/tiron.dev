@@ -30,7 +30,7 @@ const Projects = () => {
     {
         id:2,
         img: require('../images/LogitechLanding.png'),
-        title: 'LogitechLanding',
+        title: 'Logitech Landing',
         descr: 'lorumipsum'
     },
     {
@@ -103,10 +103,12 @@ const changePage = (page) => {
                 <h3 className='projects__title-back'>MY PROJECT</h3>
                 <h3 className='projects__title'>MY PROJECTS</h3>
             </div>
-
+            <div className='projects__wrapper'>
             {currentRecords.map((project, index) => 
          <Project key={project.id} project={project} />
       )}
+            </div>
+            
       <Pagination  page={page} changePage={changePage} totalPages={totalPages} />
         </section>
     );

@@ -38,6 +38,13 @@
       align-items: center;
       gap: 20px;
   }
+
+  .projects__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1vmin;
+  }
   
   .project {
     display: flex;
