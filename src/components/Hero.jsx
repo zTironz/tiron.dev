@@ -15,8 +15,10 @@ const Hero = () => {
             <button className='hero__cv-button'><img src={CV} alt='cv' />Download CV</button>
             </div>
             <div className='hero__wrapper'>
-            <img className='hero__img' src={require('../images/photo.png')} alt="hero" />
+            <img className='hero__img' src={require('../images/test.jpeg')} alt="hero" />
             <div className='hero__img-wrapper'></div>
+            <div className='hero__img-plus'></div>
+            <div className='hero__img-slash'></div>
             </div>
         </section>
     );
