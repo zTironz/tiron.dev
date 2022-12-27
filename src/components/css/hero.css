@@ -97,3 +97,23 @@
       border-radius: 50%;
       border: 1px solid #FBFF22;
   }
+
+  .hero__img-plus {
+    background-image: url('../../images/hero__plus.svg');
+    position: absolute;
+    width: 15%;
+    height: 15%;
+    top: 10px;
+    right: 9px;
+    background-repeat: no-repeat;
+  }
+
+  .hero__img-slash {
+    background-image: url('../../images/hero_slash.svg');
+    position: absolute;
+    width: 25%;
+    height: 15%;
+    bottom: 0;
+    left: -9px;
+    background-repeat: no-repeat;
+  }
