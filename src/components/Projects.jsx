@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import Project from './Project';
 import { useState } from 'react';
 import Pagination from './pagination/Pagination';
+import Loader from './Loader';
 
 
 
@@ -12,6 +13,8 @@ const Projects = () => {
     const [limit] = useState(3);
    
     const [page, setPage] = useState(1);
+
+    const [loading, setLoading] = useState(false);
 
     const [store] = useState([{
         id:0,
@@ -30,7 +33,7 @@ const Projects = () => {
     {
         id:2,
         img: require('../images/LogitechLanding.png'),
-        title: 'Logitech Landing',
+        title: 'Logitech',
         descr: 'lorumipsum'
     },
     {
@@ -92,8 +95,13 @@ const getPageCount =  (store,limit) => {
     return Math.ceil(store.length / limit)
 }
 
+
 const changePage = (page) => {
     // setProjects(store)
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 500);
     setPage(page)
    }
 
@@ -103,11 +111,16 @@ const changePage = (page) => {
                 <h3 className='projects__title-back'>MY PROJECT</h3>
                 <h3 className='projects__title'>MY PROJECTS</h3>
             </div>
-            <div className='projects__wrapper'>
+            
+
+            {loading ?
+       <div style={{display: "flex", justifyContent: "center"}}><Loader/></div> :
+       <div className='projects__wrapper'>
             {currentRecords.map((project, index) => 
          <Project key={project.id} project={project} />
       )}
             </div>
+     }
             
       <Pagination  page={page} changePage={changePage} totalPages={totalPages} />
         </section>
