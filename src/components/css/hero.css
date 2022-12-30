@@ -1,11 +1,12 @@
 .hero {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     margin-top: 20px;
+    flex-direction: column;
   }
   
   .hero__texts {
-    width: 45%;
+    /* width: 55%; */
   }
   
   .hero__text {
@@ -78,8 +79,11 @@
   .hero__wrapper {
     position: relative;
       display: flex;
-      width: 45%;
-      height: 45%;
+      width: 35%;
+      height: 35%;
+      float: right;
+    margin-left: 5vmin;
+    margin-bottom: 2vmin;
   }
   
   .hero__img {
