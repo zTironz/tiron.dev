@@ -44,7 +44,7 @@
   font-size: 20px;
   line-height: 30px;
     background-color: transparent;
-  width: 148px;
+  width: 130px;
   padding: calc(1vmin);;
   /* height: 60px; */
   cursor: pointer;
@@ -52,10 +52,10 @@
   border-radius: 5px;
   }
 
-  @media screen and (max-width: 720px) {
+  /* @media screen and (max-width: 768px) {
     .contact {
       width: 100%;
       font-size: calc(12px + 1vmin);
 
     }
-  }
+  } */
