@@ -56,6 +56,10 @@
   text-align: justify;
   color: #999999;
   }
+
+  .hero__cv-link {
+    text-decoration: none;
+  }
   
   .hero__cv-button {
     padding: 1vmin;

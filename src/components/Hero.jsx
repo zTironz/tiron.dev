@@ -1,5 +1,6 @@
 import React from 'react';
 import CV from '../images/cv.svg'
+import PDF from '../files/OlegMikryukovResume.pdf'
 
 const Hero = () => {
     return (
@@ -21,7 +22,7 @@ const Hero = () => {
             </p>
             </div>
             
-            <button className='hero__cv-button'><img src={CV} alt='cv' />Download CV</button>
+            <a className='hero__cv-link' href={PDF} target="_blank" rel="noreferrer"><button className='hero__cv-button'><img src={CV} alt='cv' />Download CV</button></a>
             </div>
            
         </section>
