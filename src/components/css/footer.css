@@ -1,7 +1,7 @@
 .footer {
     display: flex;
     justify-content: center;
-    margin: 20px 0px;
+    margin-top: 3%;
 }
 
 
@@ -13,4 +13,5 @@ font-size: 20px;
 line-height: 30px;
 text-align: center;
 color: #FFFFFF;
+margin: 0;
 }
