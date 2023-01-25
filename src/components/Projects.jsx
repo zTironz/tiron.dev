@@ -19,15 +19,15 @@ const Projects = () => {
     const [store] = useState([{
         id:0,
         img: require('../images/firstProj.png'),
-        titleHightlight: 'First',
-        title: 'Project',
+        // titleHightlight: 'First',
+        title: 'First Project',
         descr: 'lorumipsum'
     },
     {
         id:1,
         img: require('../images/newsexplorer.png'),
-        titleHightlight: 'News',
-        title: 'Explorer',
+        // titleHightlight: 'News',
+        title: 'News Explorer',
         descr: 'lorumipsum'
     },
     {
@@ -81,7 +81,9 @@ const Projects = () => {
 ]);
 
 useEffect(() => {
+
     setTotalPages(getPageCount(store,limit))
+    
     // setProjects(currentRecords)
   }, [limit,store])
 
@@ -94,6 +96,7 @@ const currentRecords = store.slice(indexOfFirstRecord,
 const getPageCount =  (store,limit) => {
     return Math.ceil(store.length / limit)
 }
+
 
 
 const changePage = (page) => {
