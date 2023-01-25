@@ -14,21 +14,23 @@ import Project from './pages/Project';
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
       {/* <header className="header">
         <Navbar />
       </header> */}
-      <BrowserRouter>
+      
       <Navbar />
       <Routes>
       <Route index element={<Home />} />
       <Route path="Project" element={<Project />} />
       </Routes>
-      </BrowserRouter>
+      
       {/* <Hero />
       <Projects /> */}
       <Footer />
     </div>
+    </BrowserRouter>
   );
 }
 
