@@ -86,6 +86,7 @@
     width: 100%;
     height: 20%;
     background: #FBFF22;
+    color: black;
     border-radius: 5px;
     cursor: pointer;
     position: relative;
@@ -140,6 +141,7 @@
     .project {
         gap: 25px;
     padding: 8px;
+    max-width: 90%;
     }
     .project__img {
         width: 50%;
