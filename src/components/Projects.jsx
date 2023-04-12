@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Project from './Project';
+// import Test from './Test';
 import { useState } from 'react';
 import Pagination from './pagination/Pagination';
 import Loader from './Loader';
@@ -7,6 +8,8 @@ import Loader from './Loader';
 
 
 const Projects = () => {
+
+    // const [test, setTest] = useState('');
 
     const [totalPages , setTotalPages] = useState(0);
 
@@ -16,7 +19,7 @@ const Projects = () => {
 
     const [loading, setLoading] = useState(false);
 
-    const [store] = useState([{
+    const store = [{
         id:0,
         img: require('../images/firstProj.png'),
         // titleHightlight: 'First',
@@ -78,14 +81,14 @@ const Projects = () => {
         title: 'First Adaptive',
         descr: 'lorumipsum'
     }
-]);
+];
 
 useEffect(() => {
 
     setTotalPages(getPageCount(store,limit))
     
     // setProjects(currentRecords)
-  }, [limit,store])
+  }, [])
 
   const indexOfLastRecord = page * limit;
 const indexOfFirstRecord = indexOfLastRecord - limit;
@@ -108,6 +111,10 @@ const changePage = (page) => {
     setPage(page)
    }
 
+// const onTestChangeNumber = (number) => {
+//     setTest(number * 2)
+// }
+
     return (
         <section className='projects'>
             <div className='projects__title-wrapper'>
@@ -126,6 +133,8 @@ const changePage = (page) => {
      }
             
       <Pagination  page={page} changePage={changePage} totalPages={totalPages} />
+      {/* <Test  onTestChange={onTestChangeNumber}/>
+      <div>{test}</div> test Lifting State Up */}
         </section>
     );
 };
