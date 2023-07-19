@@ -24,62 +24,72 @@ const Projects = () => {
         img: require('../images/firstProj.png'),
         // titleHightlight: 'First',
         title: 'First Project',
-        descr: 'lorumipsum'
+        descr: 'lorumipsum',
+        src: 'https://github.com/zTironz/site'
     },
     {
         id:1,
         img: require('../images/newsexplorer.png'),
         // titleHightlight: 'News',
         title: 'News Explorer',
-        descr: 'lorumipsum'
+        descr: 'lorumipsum',
+        src: 'https://github.com/zTironz/news-explorer-frontend'
     },
     {
         id:2,
         img: require('../images/LogitechLanding.png'),
         title: 'Logitech',
-        descr: 'lorumipsum'
+        descr: 'lorumipsum',
+        src: 'https://github.com/zTironz/LogitechLanding'
     },
     {
         id:3,
         img: require('../images/places.png'),
         title: 'Places',
-        descr: 'lorumipsum'
+        descr: 'lorumipsum',
+        src: 'https://github.com/zTironz/mestoo'
     },
     {
         id:4,
         img: require('../images/adaptive.png'),
-        title: 'First Adaptive',
-        descr: 'lorumipsum'
+        title: 'Journey',
+        descr: 'lorumipsum',
+        src: 'https://github.com/zTironz/adaptive'
     },
     {
         id:5,
         img: require('../images/firstSite.png'),
-        title: 'First Adaptive',
-        descr: 'lorumipsum'
+        title: 'First site',
+        descr: 'lorumipsum',
+        src: 'https://github.com/zTironz/tironz'
     },
     {
         id:6,
         img: require('../images/kasperTest.png'),
-        title: 'First Adaptive',
-        descr: 'lorumipsum'
+        title: 'Kaspersky test',
+        descr: 'lorumipsum',
+        src: 'https://github.com/zTironz/kasperTest'
     },
     {
         id:7,
         img: require('../images/hedgehod.png'),
-        title: 'First Adaptive',
-        descr: 'lorumipsum'
+        title: 'Hedgehog',
+        descr: 'lorumipsum',
+        src: 'https://github.com/zTironz/hedgehod'
     },
     {
         id:8,
         img: require('../images/idaProj.png'),
-        title: 'First Adaptive',
-        descr: 'lorumipsum'
+        title: 'Ida test',
+        descr: 'lorumipsum',
+        src: 'https://github.com/zTironz/IdaProj'
     },
     {
         id:9,
         img: require('../images/reactPosts.png'),
-        title: 'First Adaptive',
-        descr: 'lorumipsum'
+        title: 'React test',
+        descr: 'lorumipsum',
+        src: 'https://github.com/zTironz/reactPosts'
     }
 ];
 
