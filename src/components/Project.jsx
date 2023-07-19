@@ -7,7 +7,7 @@ const Project = (props) => {
                 <img className='project__img' src={props.project.img} alt="project" />
              <div className='project__desc'>
                  <h4 className='project__title'>{props.project.titleHightlight} {props.project.title}</h4>
-                 <button className='project__button'>View Details</button>
+                 <button onClick={() => window.open(props.project.src)} className='project__button'>View Details</button>
              </div>
         </div>
     );
