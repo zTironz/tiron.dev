@@ -104,6 +104,7 @@
       left: -2%;
       border-radius: 50%;
       border: 1px solid #FBFF22;
+      animation: spin 12s linear infinite;
   }
 
   .hero__img-plus {
@@ -115,6 +116,7 @@
     right: 2%;
     background-size: contain;
     background-repeat: no-repeat;
+    /* animation: antSpin 4s linear infinite; */
   }
 
   .hero__img-slash {
@@ -133,3 +135,8 @@
       width: 50%;
     }
   }
+
+  @-moz-keyframes spin { 100% { -moz-transform: rotate(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotate(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+@keyframes antSpin { 100% { -webkit-transform: rotate(-360deg); transform:rotate(-360deg); } } 

@@ -2,6 +2,7 @@ import './components/css/header.css';
 import './components/css/hero.css';
 import './components/css/projects.css';
 import './components/css/footer.css';
+import './components/css/blog.css';
 import './App.css';
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";

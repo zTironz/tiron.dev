@@ -14,7 +14,7 @@ const NavBar = () => {
             {/* <a className='header__link' href='/about'>About</a> */}
             <Link className='header__link' to='/project'>Project</Link>
             {/* <a className='header__link' href='/project'>Project</a> */}
-            <a className='header__link' href="/contact"><button className='contact'>Contact Me</button></a>
+            {/* <a className='header__link' href="/contact"><button className='contact'>Contact Me</button></a> */}
 
           </div>
         </div>
