@@ -2,8 +2,8 @@ import React from 'react';
 
 const Project = () => {
     return (
-        <div>
-            <p>test</p>
+        <div className='blog'>
+            <p className='blog__text'>In developing...</p>
         </div>
     );
 };

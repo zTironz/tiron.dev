@@ -8,9 +8,11 @@ const Hero = () => {
             <div className='hero__texts'>
             <div className='hero__wrapper'>
             <img className='hero__img' src={require('../images/test.jpeg')} alt="hero" />
-            <div className='hero__img-wrapper'></div>
+            <div className='hero__img-wrapper'>
             <div className='hero__img-plus'></div>
             <div className='hero__img-slash'></div>
+            </div>
+            
             </div>
             <div>
             <h3 className='hero__text'>Hello!</h3>
