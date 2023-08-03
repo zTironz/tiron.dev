@@ -1,6 +1,5 @@
-import React, { useEffect } from 'react';
+// import React, { useEffect } from 'react';
 import Project from './Project';
-// import Test from './Test';
 import { useState } from 'react';
 import Pagination from './pagination/Pagination';
 import Loader from './Loader';
@@ -9,9 +8,7 @@ import Loader from './Loader';
 
 const Projects = () => {
 
-    // const [test, setTest] = useState('');
-
-    const [totalPages , setTotalPages] = useState(0);
+    const [totalPages , setTotalPages] = useState(4);
 
     const [limit] = useState(3);
    
@@ -93,12 +90,12 @@ const Projects = () => {
     }
 ];
 
-useEffect(() => {
+// useEffect(() => {
 
-    setTotalPages(getPageCount(store,limit))
+//     setTotalPages(getPageCount(store,limit))
     
-    // setProjects(currentRecords)
-  }, [])
+//     // setProjects(currentRecords)
+//   }, [])
 
   const indexOfLastRecord = page * limit;
 const indexOfFirstRecord = indexOfLastRecord - limit;
@@ -110,10 +107,11 @@ const getPageCount =  (store,limit) => {
     return Math.ceil(store.length / limit)
 }
 
-
+function lol () {
+    setTotalPages(getPageCount(store,limit))
+}
 
 const changePage = (page) => {
-    // setProjects(store)
     setLoading(true);
     setTimeout(() => {
       setLoading(false);
@@ -121,14 +119,11 @@ const changePage = (page) => {
     setPage(page)
    }
 
-// const onTestChangeNumber = (number) => {
-//     setTest(number * 2)
-// }
 
     return (
         <section className='projects'>
             <div className='projects__title-wrapper'>
-                <h3 className='projects__title-back'>MY PROJECT</h3>
+                <h3 className='projects__title-back'>MY PROJECTS</h3>
                 <h3 className='projects__title'>MY PROJECTS</h3>
             </div>
             
@@ -142,9 +137,7 @@ const changePage = (page) => {
             </div>
      }
             
-      <Pagination  page={page} changePage={changePage} totalPages={totalPages} />
-      {/* <Test  onTestChange={onTestChangeNumber}/>
-      <div>{test}</div> test Lifting State Up */}
+      <Pagination onClick={()=>lol()}  page={page} changePage={changePage} totalPages={totalPages} />
         </section>
     );
 };

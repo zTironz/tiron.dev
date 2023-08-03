@@ -129,7 +129,7 @@
 
   @media screen and (max-width: 1024px) {
     .projects__title-back {
-        font-size: 20vmin;
+        font-size: 16vmin;
         line-height: 30vmin;
     }
     
