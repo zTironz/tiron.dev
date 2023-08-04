@@ -40,22 +40,25 @@
   }
 
   .projects__wrapper {
-    display: flex;
+    display: grid;
+    grid-auto-flow: column;
     flex-wrap: wrap;
-    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 300px);
     gap: 2vmin;
   }
   
   .project {
     display: flex;
     padding: 1%;
+    padding: 1rem 1.5rem;
     /* gap: 40px; */
-    max-width: 46%;
+    /* max-width: 46%; */
     justify-content: space-between;
     background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.05);
-  border-radius: 20px;
-  box-shadow: 1px -1px 3px #fbff23;
+    border: 2px solid rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    box-shadow: 1px -1px 3px #fbff23;
   }
   
   .project__img {
