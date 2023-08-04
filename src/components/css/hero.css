@@ -5,9 +5,6 @@
     flex-direction: column;
   }
   
-  .hero__texts {
-    /* width: 55%; */
-  }
   
   .hero__text {
     font-family: 'Poppins';

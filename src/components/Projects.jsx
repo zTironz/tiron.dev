@@ -112,10 +112,10 @@ function lol () {
 }
 
 const changePage = (page) => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 500);
+    // setLoading(true);
+    // setTimeout(() => {
+    //   setLoading(false);
+    // }, 500);
     setPage(page)
    }
 
