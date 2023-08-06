@@ -8,9 +8,9 @@ import Loader from './Loader';
 
 const Projects = () => {
 
-    const [totalPages , setTotalPages] = useState(4);
+    const [totalPages , setTotalPages] = useState(2);
 
-    const [limit] = useState(3);
+    const [limit] = useState(6);
    
     const [page, setPage] = useState(1);
 
