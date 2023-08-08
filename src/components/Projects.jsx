@@ -112,11 +112,11 @@ function lol () {
 }
 
 const changePage = (page) => {
-    // setLoading(true);
-    // setTimeout(() => {
-    //   setLoading(false);
-    // }, 500);
     setPage(page)
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 500);
    }
 
 
@@ -129,9 +129,10 @@ const changePage = (page) => {
             
 
             {loading ?
-       <div style={{display: "flex", justifyContent: "center"}}><Loader/></div> :
+       <div style={{display: "flex", justifyContent: "center"}}><Loader/></div>
+        :
        <div className='projects__wrapper'>
-            {currentRecords.map((project, index) => 
+            {currentRecords.map((project) => 
          <Project key={project.id} project={project} />
       )}
             </div>
