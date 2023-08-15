@@ -128,17 +128,17 @@ const changePage = (page) => {
             </div>
             
 
-            {loading ?
-       <div style={{display: "flex", justifyContent: "center"}}><Loader/></div>
-        :
-       <div className='projects__wrapper'>
+            {/* {loading ?
+       <div  style={{display: "flex", justifyContent: "center",visibility: loading ? "hidden" : "visible"}}><Loader/></div>
+        : */}
+       <div style={{visibility: loading ? "hidden" : "visible"}} className='projects__wrapper'>
             {currentRecords.map((project) => 
          <Project key={project.id} project={project} />
       )}
             </div>
-     }
+     {/* } */}
             
-      <Pagination onClick={()=>lol()}  page={page} changePage={changePage} totalPages={totalPages} />
+      <Pagination page={page} changePage={changePage} totalPages={totalPages} />
         </section>
     );
 };
