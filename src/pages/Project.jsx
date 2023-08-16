@@ -19,11 +19,11 @@ const Project = () => {
     function newNews() {
         fetch('http://localhost:3000/articles', {
             method: 'POST',
+            credentials: 'include',
             body: JSON.stringify({
                 title: title,
                  tag: tag,
                 text: text,
-                owner: "64c2789b13ebbef8e0da431f"
             }),
             headers: {
                 "Content-type": "application/json; charset=UTF-8"
