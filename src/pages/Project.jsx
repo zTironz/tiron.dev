@@ -53,6 +53,25 @@ const Project = () => {
         // .catch(err => console.log(err))
     }
 
+    function deleteItem(id) {
+        fetch(`http://localhost:3000/articles/${id}`, {
+          method: "DELETE",
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          credentials: 'include',
+          body: JSON.stringify({
+            "email": email,
+            "password": password
+          }),
+        })
+        .then(res => console.log(res.json())
+        )
+        
+        // .then(data => setStore(data.data))
+        // .catch(err => console.log(err))
+    }
+
     function handleChangeTitle(e) {
         setTitle(e.target.value);
     }
@@ -95,10 +114,16 @@ const Project = () => {
                 <p>{el.text}</p>
                 <p>{el.tag}</p>
                 <p>{el.owner.name}</p>
+                <button style={{color: "red", fontSize: '8px', width: '40px', height: '20px'}} onClick={()=>deleteItem(el._id)}>delete</button>
              </div>
                 )
             }</div>
-        </div>
+
+
+<div id="yandex _rtb _R-I-677833-1" style={{maxHeight: 80 + "vh"}}>
+<div style={{height: 72 + 'vh'}}></div></div>
+<div>test</div>
+</div>
     );
 };
 
