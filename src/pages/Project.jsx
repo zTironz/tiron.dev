@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const Project = () => {
     
@@ -10,12 +10,19 @@ const Project = () => {
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
-    function news() {
+    useEffect(() =>  {
         fetch('http://localhost:3000/articles')
         .then(res => res.json())
         .then(data => setStore(data.articles))
         .catch(err => console.log(err))
-    }
+    },[])
+
+    // function news() {
+    //     fetch('http://localhost:3000/articles')
+    //     .then(res => res.json())
+    //     .then(data => setStore(data.articles))
+    //     .catch(err => console.log(err))
+    // }
     function newNews() {
         fetch('http://localhost:3000/articles', {
             method: 'POST',
@@ -67,6 +74,11 @@ const Project = () => {
         })
         .then(res => console.log(res.json())
         )
+        setStore(store.filter((employee) => {
+            // 👇️ remove object that has id equal to 2
+            console.log(employee)
+            return employee._id !== id;
+          }))
         
         // .then(data => setStore(data.data))
         // .catch(err => console.log(err))
@@ -95,7 +107,7 @@ const Project = () => {
     return (
         <div className='blog'>
             <p className='blog__text'>In developing...</p>
-            <button style={{color: "red", fontSize: '8px', width: '40px', height: '20px'}} onClick={()=>news()}>load</button>
+            {/* <button style={{color: "red", fontSize: '8px', width: '40px', height: '20px'}} onClick={()=>news()}>load</button> */}
             <button style={{color: "red", fontSize: '8px', width: '40px', height: '20px'}} onClick={()=>newNews()}>Create</button>
             <input type="text" onChange={handleChangeTitle} />
             <input type="text" onChange={handleChangeText} />
@@ -110,11 +122,11 @@ const Project = () => {
             <div style={{color: "red", fontSize: '8px'}}>{
                 store.map(el => 
              <div style={{border: "1px solid black", padding: '2px', margin: '2px'}} key={el._id}>
-                <p>{el.title}</p>
+                <p><b>{el.title}</b></p>
                 <p>{el.text}</p>
                 <p>{el.tag}</p>
                 <p>{el.owner.name}</p>
-                <button style={{color: "red", fontSize: '8px', width: '40px', height: '20px'}} onClick={()=>deleteItem(el._id)}>delete</button>
+                <button style={{color: "red", fontSize: '8px', width: '40px', height: '20px'}} onClick={()=>{deleteItem(el._id)}}>delete</button>
              </div>
                 )
             }</div>
