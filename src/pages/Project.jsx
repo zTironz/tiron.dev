@@ -7,6 +7,8 @@ const Project = () => {
     const [text, setText] = useState('')
     const [tag, setTag] = useState('')
 
+    const [edit, setEdit] = useState(true)
+
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
 
@@ -60,7 +62,7 @@ const Project = () => {
         // .catch(err => console.log(err))
     }
 
-    function deleteItem(id) {
+    function handleDeleteItem(id) {
         fetch(`http://localhost:3000/articles/${id}`, {
           method: "DELETE",
           headers: {
@@ -102,6 +104,26 @@ const Project = () => {
         setPassword(e.target.value);
     }
 
+    function handleChangeItem(e) {
+      setEdit(!edit)
+      if(edit===false) {
+        fetch(`http://localhost:3000/articles/${e}`, {
+          method: "PATCH",
+     credentials: 'include',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            "title": title,
+            "text": text
+          }),
+        })
+        .then(res => res.json()
+        )
+      }
+      
+    }
+
 
   
     return (
@@ -122,11 +144,12 @@ const Project = () => {
             <div style={{color: "red", fontSize: '8px'}}>{
                 store.map(el => 
              <div style={{border: "1px solid black", padding: '2px', margin: '2px'}} key={el._id}>
-                <p><b>{el.title}</b></p>
-                <p>{el.text}</p>
-                <p>{el.tag}</p>
-                <p>{el.owner.name}</p>
-                <button style={{color: "red", fontSize: '8px', width: '40px', height: '20px'}} onClick={()=>{deleteItem(el._id)}}>delete</button>
+                {edit?<p>{el.title}</p>:<input onChange={handleChangeTitle} placeholder={el.title}></input>}
+                {edit?<p>{el.text}</p>:<input onChange={handleChangeText} placeholder={el.text}></input>}
+                {edit?<p>{el.tag}</p>:<input onChange={handleChangeTag} placeholder={el.tag}></input>}
+                {edit?<p>{el.owner.name}</p>:<input placeholder={el.owner.name}></input>}
+                <button style={{color: "red", fontSize: '8px', width: '40px', height: '20px'}} onClick={()=>{handleDeleteItem(el._id)}}>delete</button>
+                <button style={{color: "red", fontSize: '8px', width: '40px', height: '20px'}} onClick={()=>{handleChangeItem(el._id)}}>{edit?'edit':'save'}</button>
              </div>
                 )
             }</div>
