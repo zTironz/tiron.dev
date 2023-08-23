@@ -39,7 +39,7 @@ const Project = () => {
               }
         })
         // .then(res => res.json())
-        // .then(data => setStore(data.data))
+        // .then(data => setStore(...data, data))
         // .catch(err => console.log(err))
     }
 
@@ -153,10 +153,6 @@ const Project = () => {
              </div>
                 )
             }</div>
-
-
-<div id="yandex _rtb _R-I-677833-1" style={{maxHeight: 80 + "vh"}}>
-<div style={{height: 72 + 'vh'}}></div></div>
 <div>test</div>
 </div>
     );
