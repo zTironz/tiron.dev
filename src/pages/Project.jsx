@@ -38,6 +38,8 @@ const Project = () => {
                 "Content-type": "application/json; charset=UTF-8"
               }
         })
+        .then(res => res.json())
+        .then(data => setStore(prev => [...prev, data.data]))
         // .then(res => res.json())
         // .then(data => setStore(...data, data))
         // .catch(err => console.log(err))
@@ -86,23 +88,23 @@ const Project = () => {
         // .catch(err => console.log(err))
     }
 
-    function handleChangeTitle(e) {
-        setTitle(e.target.value);
-    }
-    function handleChangeText(e) {
-        setText(e.target.value);
-    }
-    function handleChangeTag(e) {
-        setTag(e.target.value);
-    }
+    // function handleChangeTitle(e) {
+    //     setTitle(e.target.value);
+    // }
+    // function handleChangeText(e) {
+    //     setText(e.target.value);
+    // }
+    // function handleChangeTag(e) {
+    //     setTag(e.target.value);
+    // }
 
-    function handleChangeEmail(e) {
-        setEmail(e.target.value);
-    }
+    // function handleChangeEmail(e) {
+    //     setEmail(e.target.value);
+    // }
 
-    function handleChangePassword(e) {
-        setPassword(e.target.value);
-    }
+    // function handleChangePassword(e) {
+    //     setPassword(e.target.value);
+    // }
 
     function handleChangeItem(e) {
       setEdit(!edit)
@@ -124,29 +126,28 @@ const Project = () => {
       
     }
 
-
   
     return (
         <div className='blog'>
             <p className='blog__text'>In developing...</p>
             {/* <button style={{color: "red", fontSize: '8px', width: '40px', height: '20px'}} onClick={()=>news()}>load</button> */}
             <button style={{color: "red", fontSize: '8px', width: '40px', height: '20px'}} onClick={()=>newNews()}>Create</button>
-            <input type="text" onChange={handleChangeTitle} />
-            <input type="text" onChange={handleChangeText} />
-            <input type="text" onChange={handleChangeTag} />
+            <input type="text" onChange={(e) => setTitle(e.target.value)} />
+            <input type="text" onChange={(e) => setText(e.target.value)} />
+            <input type="text" onChange={(e) => setTag(e.target.value)} />
             <br />
             <br />
-            <input placeholder='email' type="text" onChange={handleChangeEmail} />
-            <input placeholder='password' type="text" onChange={handleChangePassword} />
+            <input placeholder='email' type="text" onChange={(e) => setEmail(e.target.value)} />
+            <input placeholder='password' type="text" onChange={(e) => setPassword(e.target.value)} />
             <button style={{color: "red", fontSize: '8px', width: '40px', height: '20px'}} onClick={()=>login()}>Login</button>
             <br />
             <br />
             <div style={{color: "red", fontSize: '8px'}}>{
                 store.map(el => 
              <div style={{border: "1px solid black", padding: '2px', margin: '2px'}} key={el._id}>
-                {edit?<p>{el.title}</p>:<input onChange={handleChangeTitle} placeholder={el.title}></input>}
-                {edit?<p>{el.text}</p>:<input onChange={handleChangeText} placeholder={el.text}></input>}
-                {edit?<p>{el.tag}</p>:<input onChange={handleChangeTag} placeholder={el.tag}></input>}
+                {edit?<p>{el.title}</p>:<input onChange={(e) => setTitle(e.target.value)} placeholder={el.title}></input>}
+                {edit?<p>{el.text}</p>:<input onChange={(e) => setText(e.target.value)} placeholder={el.text}></input>}
+                {edit?<p>{el.tag}</p>:<input onChange={(e) => setTag(e.target.value)} placeholder={el.tag}></input>}
                 {edit?<p>{el.owner.name}</p>:<input placeholder={el.owner.name}></input>}
                 <button style={{color: "red", fontSize: '8px', width: '40px', height: '20px'}} onClick={()=>{handleDeleteItem(el._id)}}>delete</button>
                 <button style={{color: "red", fontSize: '8px', width: '40px', height: '20px'}} onClick={()=>{handleChangeItem(el._id)}}>{edit?'edit':'save'}</button>
